@@ -49,7 +49,7 @@ public class MiddleOrderTest extends BaseTest {
     public void testCreateOrderSuccess() {
         /// Нулевой шаг - заходим на форму заказа кликнув по кнопке "Заказать" на странице
         MainPage mainPage = new MainPage(driver);
-        mainPage.clickBottomOrderButton();
+        mainPage.clickMiddleOrderButton();
 
         // Первый шаг
         PersonalDetailsPage personalDetailsPage = new PersonalDetailsPage(driver);

@@ -14,10 +14,10 @@ public class MainPage {
     private By topOrderButton = By.cssSelector(".Button_Button__ra12g");
 
     // Локатор кнопки "Заказать" в нижней части страницы
-    private By bottomOrderButton = By.cssSelector("button.Button_Button__ra12g.Button_Middle__1CSJM");
+    private By middleOrderButton = By.cssSelector("button.Button_Button__ra12g.Button_Middle__1CSJM");
 
     // Локатор для раздела FAQ - используется для подскрола к разделу
-    private By FAQ = By.className("Home_FAQ__3uVm4");
+    private By faqSection = By.className("Home_FAQ__3uVm4");
 
     // Базовая часть идентификатора для заголовков FAQ (заголовок)
     private final String faqItemHeaderBase = "accordion__heading-";
@@ -38,16 +38,16 @@ public class MainPage {
     }
 
     // Метод для клика по кнопке "Заказать" на странице
-    public void clickBottomOrderButton() {
+    public void clickMiddleOrderButton() {
         //Кнопка заказа находится в средней части MainPage, делаем подскролл к ней
-        WebElement elementToScrollTo = driver.findElement(bottomOrderButton);
+        WebElement elementToScrollTo = driver.findElement(middleOrderButton);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elementToScrollTo);
         elementToScrollTo.click();
     }
 
     /// Метод для подскролла до FAQ
     public void scrollToFaq() {
-        WebElement elementToScrollTo = driver.findElement(FAQ);
+        WebElement elementToScrollTo = driver.findElement(faqSection);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elementToScrollTo);
     }
 

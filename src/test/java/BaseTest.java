@@ -9,6 +9,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 
+import static org.junit.internal.Classes.getClass;
+
 
 // Класс с вынесеными методами с аннотациями @Before и @After
 public class BaseTest {
@@ -16,6 +18,7 @@ public class BaseTest {
 
     @Before
     public void setUp() {
+        java.lang.Object System;
         System.setProperty("webdriver.chrome.driver", getClass().getClassLoader().getResource("chromedriver").getPath());
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
